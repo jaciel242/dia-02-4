@@ -1,0 +1,29 @@
+import model.Livro;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Livro p = new Livro();
+        p.nome = "inferno";
+        p.autor = "Dan Brown";
+
+
+        p.detalhes();
+
+
+
+    }
+}
+
+package model;
+
+public class Livro {
+
+    public String nome;
+    public String  autor;
+
+    public void detalhes(){
+        System.out.println("nome do livro é :" + this.nome +" autor é :"+this.autor);
+
+    }
+}
