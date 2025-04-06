@@ -1,0 +1,34 @@
+import model.Produto;
+
+public class Main {
+    public static void main(String[] args){
+
+        Produto n = new Produto();
+        n.nome= "agua";
+        n.preco= 10;
+        n.desconto=10;
+        n.pfinal = n.preco-(n.preco*(n.desconto/100));
+
+        n.calcularprecofinal();
+
+
+
+
+    }
+}
+
+
+package model;
+
+public class Produto {
+    public String nome;
+    public double preco;
+    public double desconto;
+    public double pfinal;
+
+
+    public void calcularprecofinal(){
+        System.out.println("O valor desse produtor com desconto é de; "+pfinal);
+
+    }
+}
