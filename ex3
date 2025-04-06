@@ -1,0 +1,29 @@
+import model.Retangulo;
+
+public class Main {
+    public static void main(String[] args){
+
+        Retangulo p = new Retangulo();
+        p.largura = 25;
+        p.altura = 10;
+        p.area = p.largura * p.altura;
+
+        p.calcularArea();
+
+
+    }
+}
+
+
+package model;
+
+public class Retangulo {
+    public double largura;
+    public double altura;
+
+    public double area;
+
+    public void calcularArea(){
+        System.out.println("Valor da Area é :" + area + " Metros.");
+    }
+}
