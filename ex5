@@ -1,0 +1,45 @@
+import model.ContaBancaria;
+
+public class Main {
+    public static void main(String[] args){
+
+        ContaBancaria conta = new ContaBancaria();
+        double valor = 2000;
+        conta.depositar(valor);
+        valor=200;
+        conta.sacar(valor);
+
+        conta.getSaldo();
+
+
+
+
+    }
+}
+
+
+package model;
+
+public class ContaBancaria {
+    public int numerrodaconta;
+    double saldo;
+    public String nomecliente;
+
+
+
+    public void depositar(double valor){
+       saldo = saldo + valor;
+    }
+    public void sacar(double valor){
+        if(saldo>=valor) {
+            saldo = saldo-valor;
+        }
+        else {
+            System.out.println("saldo insuficiente");
+        }
+    }
+    public void getSaldo(){
+        System.out.println("Valor "+saldo);
+
+    }
+}
