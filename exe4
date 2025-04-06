@@ -1,0 +1,32 @@
+import model.Funcionario;
+
+public class Main {
+    public static void main(String[] args){
+
+        Funcionario p = new Funcionario();
+        p.nome = "Jaciel";
+        p.salario = 1000;
+        p.porcentual = 50;
+        p.calcular = p.salario * (p.porcentual/100+1);
+
+        p.aumentarSalario();
+
+
+    }
+}
+
+
+package model;
+
+public class Funcionario {
+
+    public String nome;
+    public double salario;
+    public double porcentual;
+    public double calcular;
+
+
+    public void aumentarSalario(){
+        System.out.println("O novo salario  é :" + calcular + " reais.");
+    }
+}
