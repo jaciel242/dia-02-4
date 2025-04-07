@@ -1,0 +1,28 @@
+package model;
+
+public class Veiculo {
+     public double taque;
+
+    public void abastecer(double litros){
+       if (taque>30){
+           taque=taque+litros;
+           System.out.println("seu taque esta com "+ taque);
+       }
+       else{
+            System.out.println("taque ja esta cheio");
+       }
+    }
+}
+
+import model.Veiculo;
+
+public class Main {
+    public static void main(String[] args){
+
+        Veiculo p = new Veiculo();
+        p.taque = 20;
+        double litros=15;
+        p.abastecer(litros);
+
+    }
+}
